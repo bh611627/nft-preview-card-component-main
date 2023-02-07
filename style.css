@@ -135,8 +135,8 @@ hr{
     width: 100%;
 }
 .attribution{
-    color: var(--White);
     font-size: 18px;
+    color: var(--White);
     text-align: center;
 }
 .attribution > a{
