@@ -1,0 +1,147 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+/* Globel Variable */
+:root{
+--primary-font:'Outfit', sans-serif;
+--Softblue: rgb(139, 172, 218);
+--Cyan: rgb(0, 255, 247);
+--Verydarkblue_1: rgb(13, 25, 43);
+--Verydarkblue_2: rgb(20, 37, 61);
+--Verydarkblue_3: rgb(47, 65, 91);
+--White: rgb(255, 255, 255);
+}
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--Verydarkblue_1);
+}
+/* Card Container */
+.container{
+    width: 350px;
+    /* height: 540px; */
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+    padding: 10px 10px;
+    background: var(--Verydarkblue_2);
+}
+/* Image Container */
+.img_container{
+    position: relative;
+    margin: 0 auto;
+}
+/* Hero Image in Card */
+.hero_img{
+    display: block;
+    opacity: 1;
+    border-radius: 10px;
+    height: 300px;
+    margin: 15px auto;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 255, 247, 0.4);
+    opacity: -1;
+    border-radius: 10px;
+    margin: 15px auto;
+    transition-property: opacity;
+    transition-duration: .3s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+/* Content on Card */
+.content{
+    width: 90%;
+}
+.content > a{
+    color: var(--Cyan);
+    text-decoration: none;
+    font-size: 18px;
+}
+.content > p{
+    color: var(--Softblue);
+    font-size: 18px;
+    margin-top: 15px;
+}
+/* Flexing The Content To algin in same line */
+.flex_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.flex_content > p{
+    color: var(--Cyan);
+    font-size: 18px;
+}
+.flex_content > p > img{
+    margin-right: 5px;
+}
+.flex_content > p:last-child{
+    color: var(--Softblue);
+    font-size: 18px;
+}
+/* Line */
+hr{
+    color: var(--Verydarkblue_3);
+}
+/* Card Footer */
+.container_footer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.container_footer > img{
+    height: 30px;
+    border: 2px solid var(--White);
+    border-radius: 100%;
+    margin-right: 15px;
+}
+.container_footer > p{
+    font-size: 18px;
+    color: var(--Softblue);
+}
+.container_footer > a{
+    font-size: 18px;
+    color: var(--Cyan);
+    text-decoration: none;
+}
+/* Attribution */
+.attribution{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.attribution{
+    color: var(--White);
+    font-size: 18px;
+    text-align: center;
+}
+.attribution > a{
+    color: var(--Cyan);
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
